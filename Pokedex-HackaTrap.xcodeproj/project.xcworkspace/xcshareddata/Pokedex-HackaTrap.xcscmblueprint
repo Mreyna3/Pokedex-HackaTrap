@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E76E11C037D48AECF15A6467E68C3332E6565E9E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "692E2DC9F5D12D256F1ADF6FBCAAE70D30414847" : 9223372036854775807,
+    "E76E11C037D48AECF15A6467E68C3332E6565E9E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EBC29B1E-F250-45D0-9A1C-F4BB8762E210",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "692E2DC9F5D12D256F1ADF6FBCAAE70D30414847" : "..\/..\/Desktop\/pokeapi",
+    "E76E11C037D48AECF15A6467E68C3332E6565E9E" : "Pokedex-HackaTrap\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Pokedex-HackaTrap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Pokedex-HackaTrap.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/phalt\/pokeapi.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "692E2DC9F5D12D256F1ADF6FBCAAE70D30414847"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Mreyna3\/Pokedex-HackaTrap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E76E11C037D48AECF15A6467E68C3332E6565E9E"
+    }
+  ]
+}
