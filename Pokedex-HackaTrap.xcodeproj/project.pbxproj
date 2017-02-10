@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D51BCEEE1E463422001945DE /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51BCEED1E463422001945DE /* CSV.swift */; };
+		D51BCEF01E4915D8001945DE /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D51BCEEF1E4915D8001945DE /* pokemon.ttf */; };
+		D51BCEF21E4A31BC001945DE /* poketune.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D51BCEF11E4A31BC001945DE /* poketune.mp3 */; };
 		D5972AB11E39BFF60099196C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5972AB01E39BFF60099196C /* AppDelegate.swift */; };
 		D5972AB31E39BFF60099196C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5972AB21E39BFF60099196C /* ViewController.swift */; };
 		D5972AB61E39BFF60099196C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5972AB41E39BFF60099196C /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		D51BCEED1E463422001945DE /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
+		D51BCEEF1E4915D8001945DE /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pokemon.ttf; path = ../../../../Downloads/pokemon/pokemon.ttf; sourceTree = "<group>"; };
+		D51BCEF11E4A31BC001945DE /* poketune.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = poketune.mp3; path = ../../../../Downloads/poketune.mp3; sourceTree = "<group>"; };
 		D5972AAD1E39BFF60099196C /* Pokedex-HackaTrap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex-HackaTrap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5972AB01E39BFF60099196C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5972AB21E39BFF60099196C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51BCEF31E4A3260001945DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5972AC21E39C9DE0099196C /* pokemon.csv */,
+				D51BCEF11E4A31BC001945DE /* poketune.mp3 */,
+				D51BCEEF1E4915D8001945DE /* pokemon.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D51BCEF41E4A327D001945DE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D51BCEED1E463422001945DE /* CSV.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		D5972AA41E39BFF60099196C = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +87,13 @@
 				D5CCAD1E1E43B335001ED2B0 /* controller */,
 				D5CCAD1D1E43B32F001ED2B0 /* view */,
 				D5972AC41E39D6740099196C /* Model */,
+				D51BCEF41E4A327D001945DE /* Utilities */,
+				D51BCEF31E4A3260001945DE /* Resources */,
 				D5972AB01E39BFF60099196C /* AppDelegate.swift */,
-				D5972AB21E39BFF60099196C /* ViewController.swift */,
 				D5972AB41E39BFF60099196C /* Main.storyboard */,
 				D5972AB71E39BFF60099196C /* Assets.xcassets */,
 				D5972AB91E39BFF60099196C /* LaunchScreen.storyboard */,
 				D5972ABC1E39BFF60099196C /* Info.plist */,
-				D5972AC21E39C9DE0099196C /* pokemon.csv */,
-				D51BCEED1E463422001945DE /* CSV.swift */,
 			);
 			path = "Pokedex-HackaTrap";
 			sourceTree = "<group>";
@@ -96,6 +117,7 @@
 		D5CCAD1E1E43B335001ED2B0 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				D5972AB21E39BFF60099196C /* ViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -160,10 +182,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51BCEF01E4915D8001945DE /* pokemon.ttf in Resources */,
 				D5972ABB1E39BFF60099196C /* LaunchScreen.storyboard in Resources */,
 				D5972AB81E39BFF60099196C /* Assets.xcassets in Resources */,
 				D5972AC31E39C9DE0099196C /* pokemon.csv in Resources */,
 				D5972AB61E39BFF60099196C /* Main.storyboard in Resources */,
+				D51BCEF21E4A31BC001945DE /* poketune.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

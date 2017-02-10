@@ -7,20 +7,47 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UISearchBarDelegate {
 
+    
     @IBOutlet weak var collection: UICollectionView!
     
     var pokemonArr = [Pokemon]()
+    var filteredPokemon = [Pokemon]()
+    
+    var searchMode:Bool = false
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var musicPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collection.delegate = self
         collection.dataSource = self
+        searchBar.delegate = self
         
+        intiAudio()
         parseCSV()
+        
+    }
+    
+    func intiAudio(){
+    
+        let path = Bundle.main.path(forResource: "poketune", ofType: "mp3")
+        let url = URL(string: path!)
+        
+        do{
+            musicPlayer = try AVAudioPlayer(contentsOf: url! )
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+            
+        }catch let err as NSError{
+            print(err.debugDescription)
+        }
         
     }
     
@@ -40,9 +67,34 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             print(rows)
         } catch let err as NSError {
-            print(err)
+            print(err.debugDescription)
         }
     }
+    
+    @IBAction func toggleMusicBtn(_ sender: UIButton) {
+        
+        if musicPlayer.isPlaying == true {
+            musicPlayer.stop()
+            sender.alpha = 0.2
+        } else{
+            musicPlayer.play()
+            sender.alpha = 1.0
+        }
+    
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == ""{
+            searchMode = false
+        }else{
+            searchMode = true
+            let lower = searchBar.text!.lowercased()
+            
+            var filteredPokemon = try pokemonArr.filter({$0.name.range(of: lower) != nil })
+        }
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
